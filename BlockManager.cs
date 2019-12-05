@@ -12,14 +12,6 @@ namespace BlazeEdit
         protected override void BuildRenderTree(RenderTreeBuilder builder)
         {
             int seq = 0;
-            //foreach (var type in State.Blocks)
-            //{
-            //    if (!type.GetInterfaces().Any(t => t == typeof(IComponent))) continue;
-
-            //    builder.OpenComponent<Block>(seq++);
-            //    builder.AddAttribute(seq++, "Name", type.Name);
-            //    builder.CloseComponent();
-            //}
 
             foreach(var block in State.Blocks)
             {

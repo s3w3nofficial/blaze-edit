@@ -16,12 +16,6 @@ namespace BlazeEdit
         public IJSRuntime JSRuntime { get; set; }
         private List<string> lastRendered;
 
-        //public Canvas(IJSRuntime jsruntime)
-        //{
-        //    this._jsruntime = jsruntime;
-        //    this.lastRendered = new List<string>();
-        //}
-
         public Canvas()
         {
             this.lastRendered = new List<string>();
