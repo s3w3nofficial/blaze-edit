@@ -31,7 +31,7 @@ namespace BlazeEdit
 
         private void OnDragStart()
         {
-            State.Payload = this.GetType();
+            State.Payload = this.ComponentType;
             State.Components.Remove(this.ComponentType);
         }
     }

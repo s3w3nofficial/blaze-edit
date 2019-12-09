@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\info\\Documents\\MyProjects\\BlazeEdit\\samples\\ClientSide\\ClientSide.csproj": {}
+    "C:\\Users\\Majda\\source\\repos\\blaze-edit\\samples\\ClientSide\\ClientSide.csproj": {}
   },
   "projects": {
-    "C:\\Users\\info\\Documents\\MyProjects\\BlazeEdit\\samples\\ClientSide\\ClientSide.csproj": {
+    "C:\\Users\\Majda\\source\\repos\\blaze-edit\\samples\\ClientSide\\ClientSide.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\info\\Documents\\MyProjects\\BlazeEdit\\samples\\ClientSide\\ClientSide.csproj",
+        "projectUniqueName": "C:\\Users\\Majda\\source\\repos\\blaze-edit\\samples\\ClientSide\\ClientSide.csproj",
         "projectName": "ClientSide",
-        "projectPath": "C:\\Users\\info\\Documents\\MyProjects\\BlazeEdit\\samples\\ClientSide\\ClientSide.csproj",
-        "packagesPath": "C:\\Users\\info\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\info\\Documents\\MyProjects\\BlazeEdit\\samples\\ClientSide\\obj\\",
+        "projectPath": "C:\\Users\\Majda\\source\\repos\\blaze-edit\\samples\\ClientSide\\ClientSide.csproj",
+        "packagesPath": "C:\\Users\\Majda\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Majda\\source\\repos\\blaze-edit\\samples\\ClientSide\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\info\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Majda\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,8 +27,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\info\\Documents\\MyProjects\\BlazeEdit\\src\\BlazeEdit\\BlazeEdit.csproj": {
-                "projectPath": "C:\\Users\\info\\Documents\\MyProjects\\BlazeEdit\\src\\BlazeEdit\\BlazeEdit.csproj"
+              "C:\\Users\\Majda\\source\\repos\\blaze-edit\\src\\BlazeEdit\\BlazeEdit.csproj": {
+                "projectPath": "C:\\Users\\Majda\\source\\repos\\blaze-edit\\src\\BlazeEdit\\BlazeEdit.csproj"
               }
             }
           }
@@ -74,12 +71,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "NETStandard.Library.Ref",
-              "version": "[2.1.0, 2.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "NETStandard.Library": {
               "privateAssets": "all"
@@ -89,20 +80,17 @@
         }
       }
     },
-    "C:\\Users\\info\\Documents\\MyProjects\\BlazeEdit\\src\\BlazeEdit\\BlazeEdit.csproj": {
+    "C:\\Users\\Majda\\source\\repos\\blaze-edit\\src\\BlazeEdit\\BlazeEdit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\info\\Documents\\MyProjects\\BlazeEdit\\src\\BlazeEdit\\BlazeEdit.csproj",
+        "projectUniqueName": "C:\\Users\\Majda\\source\\repos\\blaze-edit\\src\\BlazeEdit\\BlazeEdit.csproj",
         "projectName": "BlazeEdit",
-        "projectPath": "C:\\Users\\info\\Documents\\MyProjects\\BlazeEdit\\src\\BlazeEdit\\BlazeEdit.csproj",
-        "packagesPath": "C:\\Users\\info\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\info\\Documents\\MyProjects\\BlazeEdit\\src\\BlazeEdit\\obj\\",
+        "projectPath": "C:\\Users\\Majda\\source\\repos\\blaze-edit\\src\\BlazeEdit\\BlazeEdit.csproj",
+        "packagesPath": "C:\\Users\\Majda\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Majda\\source\\repos\\blaze-edit\\src\\BlazeEdit\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\info\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Majda\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -145,12 +133,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "NETStandard.Library.Ref",
-              "version": "[2.1.0, 2.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "NETStandard.Library": {
               "privateAssets": "all"
