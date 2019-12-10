@@ -5,6 +5,7 @@ using Microsoft.JSInterop;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -45,9 +46,18 @@ namespace BlazeEdit
                 builder.AddAttribute(seq++, "class", @class);
 
                 builder.OpenComponent<CanvasComponent>(seq++);
-                builder.AddAttribute(seq++, "ComponentType", component);
+                builder.AddAttribute(seq++, "ComponentType", component.GetType());
 
-                builder.CloseComponent();
+                var props = component.GetType().GetProperties().Where(p => p.GetCustomAttributes().Any(a => a.GetType() == typeof(Attributes.Blazable)));
+
+                foreach(var prop in props)
+                {
+                    var val = prop.GetValue(component);
+                    //builder.AddAttribute(seq++, prop.Name, prop.GetValue(component));
+                }
+
+
+                builder.CloseComponent();               
 
                 this.lastRendered.Add(@class);
 
@@ -78,7 +88,7 @@ namespace BlazeEdit
 
                 if (sum > yDragOffset)
                 {
-                    State.Components.Insert(i, State.Payload);
+                    State.Components.Insert(i, Activator.CreateInstance(State.Payload) as ComponentBase);
                     State.Payload = null;
                     break;
                 }
@@ -86,7 +96,7 @@ namespace BlazeEdit
 
             if (this.lastRendered.Count <= 0 || State.Payload != null)
             {
-                State.Components.Add(State.Payload);
+                State.Components.Add(Activator.CreateInstance(State.Payload) as ComponentBase);
                 State.Payload = null;
             }
 

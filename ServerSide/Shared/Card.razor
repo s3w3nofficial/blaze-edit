@@ -15,7 +15,15 @@
         {
             @TitleTemplate(Title)
         }
-        <p class="card-text">@Content</p>
+
+        @if (Content != null)
+        {
+            <p class="card-text">@Content.ToString()</p>
+        }
+        else
+        {
+            <p class="card-text">Empty content</p>
+        }
     </div>
     @if (Footer != null)
     {
@@ -26,20 +34,23 @@
 </div>
 
 @code {
+
     [Parameter]
     public string Title { get; set; }
 
     [Parameter]
-    public RenderFragment Content { get; set; }
+    [Blazable]
+    public ComponentBase Content { get; set; }
 
     [Parameter]
     public RenderFragment<string>
-    TitleTemplate { get; set; } =
+    TitleTemplate
+    { get; set; } =
     (title) =>@<h4 class="card-title">@title</h4>;
 
-    [Parameter]
-    public RenderFragment Header { get; set; }
+[Parameter]
+public RenderFragment Header { get; set; }
 
-    [Parameter]
-    public RenderFragment Footer { get; set; }
-    }
+[Parameter]
+public RenderFragment Footer { get; set; }
+}

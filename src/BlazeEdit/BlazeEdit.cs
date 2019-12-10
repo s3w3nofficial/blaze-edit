@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using System.Reflection;
+using BlazeEdit.Models;
 
 namespace BlazeEdit
 {
@@ -28,6 +30,29 @@ namespace BlazeEdit
             builder.CloseElement();
 
             base.BuildRenderTree(builder);
+        }
+
+        private void Save()
+        {
+            var saved = new List<ComponentNode>();
+
+            var components = State.Components;
+            foreach (var comp in components)
+                this.SaveComponent(comp, saved);
+        }
+
+        private void SaveComponent(ComponentBase component, List<ComponentNode> tree)
+        {
+            var save = new ComponentNode();
+            save.Type = component.GetType();
+
+            foreach (var prop in component.GetType().GetProperties())
+            {
+                if (prop.GetCustomAttributes().Any(t => t.GetType() == typeof(Attributes.Blazable)) && prop.GetType() == typeof(Type))
+                {
+                    this.SaveComponent(prop.GetValue(component) as ComponentBase, save.Nodes);
+                }
+            }
         }
     }
 }
